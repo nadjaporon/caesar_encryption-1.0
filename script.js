@@ -1,6 +1,18 @@
 'use strict'
 
 
+const inputText = document.querySelector("#inputText");
+const inputNumber = document.querySelector("#inputNumber");
+const btnEncrypt = document.querySelector("#btn-encrypt");
+const divOutput = document.querySelector("#output");
+
+btnEncrypt.addEventListener("click", () => {
+    let text = inputText.value;
+    let number = parseInt(inputNumber.value);
+
+    divOutput.textContent = caesar(text, number);
+});
+
 const caesar = (text, nr) => {
 
     let charCodeSmallA = "a".charCodeAt(0);     // a = 97
@@ -11,8 +23,6 @@ const caesar = (text, nr) => {
     let startAsciiCode;
     let encryptionText = "";
     let transformedCode;
-
-    console.log(text);  // Eingabetext
 
     for (let i = 0; i < text.length; i++) {
 
@@ -37,8 +47,5 @@ const caesar = (text, nr) => {
         transformedCode += startAsciiCode;
         encryptionText += String.fromCharCode(transformedCode);
     }
-    console.log(encryptionText);
+    return encryptionText;
 }
-
-
-caesar("Zanga", 2);
