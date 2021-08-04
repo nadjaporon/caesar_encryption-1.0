@@ -24,6 +24,11 @@ const caesar = (text, nr) => {
     let encryptionText = "";
     let transformedCode;
 
+    if (text == "" || isNaN(nr)) {
+        divOutput.style.color = "red";
+        return "Bitte Text und Zahl für Verschiebung eingeben!";
+    }
+    
     for (let i = 0; i < text.length; i++) {
 
         let charCode = text.charCodeAt(i);
@@ -47,5 +52,7 @@ const caesar = (text, nr) => {
         transformedCode += startAsciiCode;
         encryptionText += String.fromCharCode(transformedCode);
     }
+    divOutput.style.color = "black";
+    encryptionText = "Verschlüsselter Text: " + encryptionText;
     return encryptionText;
 }

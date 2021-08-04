@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
     <title>Caesar Verschlüsselung</title>
 </head>
+
 <body>
-    <div class="content">
-        <h1>Caesar Verschlüsselung</h1>
-        <div class="input">
-            <input type="text" name="text" placeholder="Text zu verschlüsseln" id="inputText">
-            <input type="number" name="number" placeholder="3" id="inputNumber">
-        </div>
-        <div id="output"></div>
-        <div class="btn-encryption">
-            <button id="btn-encrypt">verschlüsseln</button>
+    <div class="container">
+        <div class="content">
+            <h1>Caesar Verschlüsselung</h1>
+            <div class="input">
+                <input type="text" name="text" placeholder="Text zu verschlüsseln" id="inputText">
+                <input type="number" name="number" placeholder="3" id="inputNumber" size="1" min="-10" max="20">
+            </div>
+            <div class="btn-encryption">
+                <button id="btn-encrypt">verschlüsseln</button>
+            </div>
+            <div id="output"></div>
+
         </div>
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>
